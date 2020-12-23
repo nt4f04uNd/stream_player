@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Stream player</title>
+   <link rel="stylesheet" type="text/css" href="/static/css/index.css">
+</head>
+
+<body>
+   <video src="<%= videoPath %>"></video>
+   <div id="controls">
+      <div class="seekbar">
+         <div class="seekbar-progress"></div>
+      </div>
+      <div class="buttons">
+         <img onclick="handleFullscreen()" src="/static/img/fullscreen.svg">
+      </div>
+   </div>
+   <div class="dialog">
+      <div class="dialog-content">
+         <button onclick="handleDialogClick('guest')">Guest</button>
+         <button onclick="handleDialogClick('host')">Host</button>
+      </div>
+   </div>
+   <script src="/static/js/sha256.min.js"></script>
+   <script src="/static/js/constants.js"></script>
+   <script src="/static/js/ws.js"></script>
+   <script src="/static/js/index.js"></script>
+</body>
+
+</html>
